@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/huggingface",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Forge",
+      "hasCanvas": false,
+      "bodyTextLen": 2111,
+      "bodyTextHash": "a932dfa786d3a33752755e53d1b8a874cdc3397ef49f89e416162a94e0be07bf",
+      "bodyTextPrefix": "Forge Models Router HUGGING FACE Model catalog 24 results Search",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/huggingface.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Forge",
+      "hasCanvas": false,
+      "bodyTextLen": 2111,
+      "bodyTextHash": "a932dfa786d3a33752755e53d1b8a874cdc3397ef49f89e416162a94e0be07bf",
+      "bodyTextPrefix": "Forge Models Router HUGGING FACE Model catalog 24 results Search",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/huggingface-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/huggingface.json"
+}

@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/conduit",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Forge",
+      "hasCanvas": false,
+      "bodyTextLen": 350,
+      "bodyTextHash": "2f002307147a0871aaa030f83988b978d25befb8ac81925026851febabf52900",
+      "bodyTextPrefix": "Forge Models Router CONDUIT Prompt router Conduit inspects the p",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/conduit.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Forge",
+      "hasCanvas": false,
+      "bodyTextLen": 350,
+      "bodyTextHash": "2f002307147a0871aaa030f83988b978d25befb8ac81925026851febabf52900",
+      "bodyTextPrefix": "Forge Models Router CONDUIT Prompt router Conduit inspects the p",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/conduit-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/conduit.json"
+}
