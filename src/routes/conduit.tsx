@@ -56,8 +56,8 @@ function ConduitPage() {
           Prompt router
         </h1>
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">
-          Conduit inspects the prompt, picks a Hugging Face pipeline, then loads
-          the most-downloaded models for that task.
+          Conduit inspects the prompt locally, picks a Hugging Face pipeline, then
+          loads the most-downloaded models for that task. No xAI call.
         </p>
 
         <form

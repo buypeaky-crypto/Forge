@@ -2,14 +2,12 @@ import { Download, Heart } from "lucide-react";
 import type { HubModel } from "@/lib/hf";
 import { cn, formatCount } from "@/lib/utils";
 
-function taskHue(task?: string): string {
-  if (!task) return "bg-raised";
+function taskTone(task?: string): string {
+  if (!task) return "bg-raised text-muted";
   if (task.includes("image") || task.includes("vision") || task.includes("object"))
-    return "bg-[#1c2228]";
-  if (task.includes("speech") || task.includes("audio")) return "bg-[#1a2220]";
-  if (task.includes("text") || task.includes("translation") || task.includes("summar"))
-    return "bg-[#1b1d24]";
-  return "bg-raised";
+    return "bg-raised text-fg";
+  if (task.includes("speech") || task.includes("audio")) return "bg-raised text-muted";
+  return "bg-raised text-muted";
 }
 
 export function ModelCard({
@@ -36,14 +34,14 @@ export function ModelCard({
     >
       <div
         className={cn(
-          "mb-3 flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium text-muted",
-          taskHue(model.pipeline_tag),
+          "mb-3 flex h-10 w-10 items-center justify-center rounded-lg text-xs font-medium",
+          taskTone(model.pipeline_tag),
         )}
         aria-hidden="true"
       >
         {(name ?? model.id).slice(0, 2).toUpperCase()}
       </div>
-      <p className="font-mono text-[13px] leading-snug text-fg">
+      <p className="font-mono text-sm leading-snug text-fg">
         {org ? (
           <>
             <span className="text-subtle">{org}/</span>

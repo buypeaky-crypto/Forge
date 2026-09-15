@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { ArrowRight, Search } from "lucide-react";
 import { useState } from "react";
+import { DonateAsk } from "@/components/donate";
 import { Shell } from "@/components/shell";
 import { ModelCard } from "@/components/model-card";
 import { Button } from "@/components/ui/button";
@@ -34,7 +35,8 @@ function Home() {
         </h1>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">
           Forge indexes the public Hugging Face Hub and runs a lightweight Conduit
-          router so each request lands on a fitting pipeline.
+          router so each request lands on a fitting pipeline. No house xAI key.
+          Open source on GitHub.
         </p>
 
         <form
@@ -124,6 +126,10 @@ function Home() {
             </div>
           )}
         </section>
+
+        <div className="mt-16">
+          <DonateAsk />
+        </div>
       </main>
     </Shell>
   );

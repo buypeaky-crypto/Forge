@@ -25,11 +25,12 @@ function Mark({ className }: { className?: string }) {
 const NAV = [
   { to: "/huggingface" as const, label: "Models" },
   { to: "/conduit" as const, label: "Router" },
+  { to: "/donate" as const, label: "Donate" },
 ];
 
 export function Shell({ children }: { children: ReactNode }) {
   return (
-    <div className="min-h-dvh bg-bg text-fg">
+    <div className="flex min-h-dvh flex-col bg-bg text-fg">
       <header className="sticky top-0 z-30 border-b border-border/80 bg-bg/90 backdrop-blur-md">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
           <Link
@@ -53,7 +54,29 @@ export function Shell({ children }: { children: ReactNode }) {
           </nav>
         </div>
       </header>
-      {children}
+      <div className="flex-1">{children}</div>
+      <footer className="border-t border-border/80">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+          <p className="text-xs leading-relaxed text-subtle">
+            Independent of xAI. Source on{" "}
+            <a
+              href="https://github.com/buypeaky-crypto/Forge"
+              target="_blank"
+              rel="noreferrer"
+              className="text-muted hover:text-fg"
+            >
+              GitHub
+            </a>
+            .
+          </p>
+          <Link
+            to="/donate"
+            className="inline-flex min-h-11 items-center text-xs text-muted hover:text-fg"
+          >
+            Small donation — BTC, ETH, SOL
+          </Link>
+        </div>
+      </footer>
     </div>
   );
 }

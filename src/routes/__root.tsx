@@ -13,7 +13,7 @@ export const Route = createRootRoute({
       { title: APP_NAME },
       {
         name: "description",
-        content: "Browse Hugging Face models and route prompts through Conduit.",
+        content: "Browse Hugging Face models and route prompts through Conduit. Independent of xAI.",
       },
       { name: "theme-color", content: "#0a0a0b" },
     ],
