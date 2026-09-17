@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Install webpack-cli (fixes your exit code 1)
+    - name: Install webpack-cli (fixes exit code 1)
       run: npm install -D webpack-cli
 
     - name: Build
