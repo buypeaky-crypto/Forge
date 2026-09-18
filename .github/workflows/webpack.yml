@@ -11,21 +11,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Use Node.js 20.x
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
+      - name: Use Node.js 20.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
 
-    - name: Install dependencies
-      run: npm ci
+      - name: Install dependencies
+        run: npm install
 
-    - name: Install webpack-cli (fixes exit code 1)
-      run: npm install -D webpack-cli
+      - name: Ensure webpack-cli
+        run: npm install -D webpack webpack-cli
 
-    - name: Build
-      run: npx webpack --mode=production
-      env:
-        CI: true
+      - name: Build
+        run: |
+          if npm pkg get scripts.build | grep -vq 'undefined'; then
+            npm run build
+          else
+            npx webpack --mode=production
+          fi
+        env:
+          CI: true
